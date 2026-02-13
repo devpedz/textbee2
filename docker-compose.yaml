@@ -48,11 +48,11 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "${PORT:-3001}:3001"
+      - 3001
     # env_file:
     #   - ./api/.env
     environment:
-      - PORT=${PORT:-3001}
+      - PORT=3001
       - REDIS_URL=${REDIS_URL:-redis://textbee-redis:6379}
 
     depends_on:
@@ -70,7 +70,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "3307:3000"
+      - 3000
     # env_file:
     #   - ./web/.env
     environment:
