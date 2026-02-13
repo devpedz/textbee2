@@ -70,11 +70,11 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "${PORT:-3000}:3000"
+      - "3307:3000"
     # env_file:
     #   - ./web/.env
     environment:
-      - PORT=${PORT:-3000}
+      - PORT=3007:3000}
       - NEXT_PUBLIC_API_BASE_URL=${NEXT_PUBLIC_API_BASE_URL:-http://localhost:3001/api/v1}
 
     depends_on:
